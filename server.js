@@ -32,7 +32,7 @@ server.get('/weather', (req, res) => {
 
 server.get('/movies', (req, res) => {
   let name = req.query.name;
-  let urlmovies = `https://api.themoviedb.org/3/search/movie?query=amman&api_key=${process.env.MOVIE_API_KEY}`;
+  let urlmovies = `https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${process.env.MOVIE_API_KEY}`;
   let gettingmovies = async () => {
     try {
       let arrmovies = await axios.get(urlmovies)
