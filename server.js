@@ -18,7 +18,7 @@ server.get('/weather', (req, res) => {
       let newday = arr.data.data.map(item => {
         return new Forecast(item);
       })
-      // console.log(newday)
+      res.send(newday)
       
     }
     catch {err => console.log(err) }
