@@ -31,6 +31,8 @@ function gettingmovies(req, res) {
 
     else {
         let urlmovies = `https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${process.env.MOVIE_API_KEY}`;
+        
+        console.log(urlmovies)
         axios
             .get(urlmovies)
             .then(arrmovies => {
